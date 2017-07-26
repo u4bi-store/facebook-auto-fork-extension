@@ -4,7 +4,7 @@
   "version": "1.0",
   "manifest_version": 2,
   "permissions": [
-    "webNavigation", "*://www.facebook.com/pokes"
+    "webNavigation", "*://www.facebook.com/"
   ],
   "background": {
     "scripts": ["app.js"],

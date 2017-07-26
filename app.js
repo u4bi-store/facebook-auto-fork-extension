@@ -1,8 +1,10 @@
 chrome.webNavigation.onCompleted.addListener(function(details) {
 
-    chrome.tabs.executeScript(details.tabId, {
-      file: "execute.js",
-      allFrames: true
-    });    
+  if(details.url.split('/')[3] !== 'pokes') return;
+
+  chrome.tabs.executeScript(details.tabId, {
+    file: "execute.js",
+    allFrames: true
+  });
 
 });
