@@ -1,4 +1,8 @@
 chrome.webNavigation.onCompleted.addListener(function(details) {
-    console.log('test');
-    
+
+    chrome.tabs.executeScript(details.tabId, {
+      file: "/execute.js",
+      allFrames: true
+    });    
+
 });
